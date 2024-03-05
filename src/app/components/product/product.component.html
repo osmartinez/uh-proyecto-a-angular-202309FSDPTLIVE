@@ -1,0 +1,17 @@
+<div class="card text-center h-100">
+    <img class="mx-auto" [src]="product.image" height="200" width="200" alt="">
+    <div class="card-body">
+        <p class="card-text">{{product.description}}</p>
+        <p class="card-text"><strong>${{product.price}}</strong></p>
+
+        <div>
+            {{product.stars}}
+            @for(i of starArray; track i){
+                <i class="fa fa-star"></i>
+            }
+            @if(starDecimal > 0){
+                <i class="fa fa-star-half-stroke"></i>
+            }
+        </div>
+    </div>
+</div>
