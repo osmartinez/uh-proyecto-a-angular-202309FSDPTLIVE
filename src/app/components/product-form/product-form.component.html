@@ -1,0 +1,21 @@
+<form [formGroup]="form" action="" (ngSubmit)="onSubmit()">
+    <div class="mb-2">
+        <label class="form-label">Nombre</label>
+        <input (keyup)="onChangeName($event)" formControlName="name" type="text" class="form-control">
+    </div>
+    <div class="mb-2">
+        <label class="form-label">Precio</label>
+        <input (keyup)="onChangePrice($event)" formControlName="price" type="number" class="form-control">
+    </div>
+    <div class="mb-2">
+        <label class="form-label">Descripcion</label>
+        <input (keyup)="onChangeDescription($event)" formControlName="description" type="text" class="form-control">
+    </div>
+    <div class="mb-2">
+        <label class="form-label">Imagen</label>
+        <input (keyup)="onChangeImage($event)" formControlName="image" type="text" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>

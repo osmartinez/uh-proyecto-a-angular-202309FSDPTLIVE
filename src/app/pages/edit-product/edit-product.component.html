@@ -1,1 +1,15 @@
-<p>edit-product works!</p>
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+       <app-product-form 
+       [product]="product" 
+       (onChangeNameEvent)="changeName($event)"
+       (onChangeDescriptionEvent)="changeDescription($event)"
+       (onChangeImageEvent)="changeImage($event)"
+       (onChangePriceEvent)="changePrice($event)"
+       (onSubmitEvent)="submit()"></app-product-form>
+    </div>
+    <div class="vr"></div>
+    <div class="col-md-6 col-lg-6">
+        <app-product [product]="product"></app-product>
+    </div>
+</div>
